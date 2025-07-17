@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS | Cyberpunk Developer Portfolio</title>
+    <meta name="description" content="Futuristic 3D portfolio with cyberpunk aesthetic showcasing cutting-edge web development skills">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="neon-spinner">
+            <span class="orbitron-font" id="spinner-text">SYSTEM INIT</span>
+            <div class="pulse-ring"></div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Background Elements -->
+        <div id="particle-network"></div>
+        <div id="starfield"></div>
+        <div class="dynamic-gradient"></div>
+        <div class="grid-overlay"></div>
+
+        <!-- Navigation -->
+        <nav class="glass-nav">
+            <div class="nav-logo orbitron-font">NEXUS</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="neon-link">HOME</a></li>
+                <li><a href="#skills" class="neon-link">SKILLS</a></li>
+                <li><a href="#projects" class="neon-link">PROJECTS</a></li>
+                <li><a href="#experience" class="neon-link">EXPERIENCE</a></li>
+                <li><a href="#contact" class="neon-link">CONNECT</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <div class="toggle-switch"></div>
+                <span class="toggle-label">CYAN</span>
+            </div>
+            <button class="audio-toggle neon-button small">AUDIO OFF</button>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content glass-panel">
+                <h1 class="orbitron-font hero-title">
+                    <span class="text-gradient">NEXUS</span>
+                    <span class="neon-underline"></span>
+                </h1>
+                <h2 class="rajdhani-font hero-subtitle">FRONTEND ARCHITECT / DIGITAL DREAMWEAVER</h2>
+                <p class="hero-description">Crafting immersive digital experiences at the intersection of technology and art</p>
+                <div class="hero-buttons">
+                    <button class="neon-button pulse">ENTER MATRIX</button>
+                    <button class="neon-button secondary">TERMINAL</button>
+                </div>
+            </div>
+            <div class="hero-cursor">
+                <div class="cursor-core"></div>
+                <div class="cursor-aura"></div>
+            </div>
+        </section>
+
+        <!-- 3D Skills Cube -->
+        <section id="skills" class="skills-section">
+            <h2 class="section-title orbitron-font">CORE COMPETENCIES</h2>
+            <div class="cube-container">
+                <div class="skill-cube">
+                    <div class="cube-face front glass-panel">
+                        <h3 class="orbitron-font">FRONTEND</h3>
+                        <div class="holographic-skill">
+                            <div class="skill-label">REACT</div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="95%">
+                                    <div class="skill-aura"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="holographic-skill">
+                            <div class="skill-label">THREE.JS</div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="90%">
+                                    <div class="skill-aura"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cube-face back glass-panel">
+                        <h3 class="orbitron-font">BACKEND</h3>
+                        <div class="holographic-skill">
+                            <div class="skill-label">NODE.JS</div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="85%">
+                                    <div class="skill-aura"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="holographic-skill">
+                            <div class="skill-label">GRAPHQL</div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="80%">
+                                    <div class="skill-aura"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cube-face right glass-panel">
+                        <h3 class="orbitron-font">UI/UX</h3>
+                        <div class="holographic-skill">
+                            <div class="skill-label">FIGMA</div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="92%">
+                                    <div class="skill-aura"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="holographic-skill">
+                            <div class="skill-label">WEBGL</div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="88%">
+                                    <div class="skill-aura"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cube-face left glass-panel">
+                        <h3 class="orbitron-font">3D DESIGN</h3>
+                        <div class="holographic-skill">
+                            <div class="skill-label">BLENDER</div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="75%">
+                                    <div class="skill-aura"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="holographic-skill">
+                            <div class="skill-label">GLSL</div>
+                            <div class="skill-bar">
+                                <div class="skill-fill" data-level="70%">
+                                    <div class="skill-aura"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Gallery -->
+        <section id="projects" class="projects-section">
+            <h2 class="section-title orbitron-font">DIGITAL ARTIFACTS</h2>
+            <div class="projects-grid">
+                <div class="cyber-card">
+                    <div class="card-header">
+                        <div class="card-corner top-left"></div>
+                        <div class="card-corner top-right"></div>
+                        <h3 class="card-title orbitron-font">NEURAL HUD</h3>
+                        <div class="card-badge">AI INTEGRATION</div>
+                    </div>
+                    <div class="card-preview" data-model="neural-hud">
+                        <div class="model-placeholder"></div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="tech-tags">
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">WebGL</span>
+                            <span class="tech-tag">React</span>
+                        </div>
+                        <button class="card-button">
+                            <span>ACCESS</span>
+                            <div class="button-arrow"></div>
+                        </button>
+                    </div>
+                    <div class="card-grid-overlay"></div>
+                </div>
+
+                <div class="cyber-card">
+                    <div class="card-header">
+                        <div class="card-corner top-left"></div>
+                        <div class="card-corner top-right"></div>
+                        <h3 class="card-title orbitron-font">QUANTUM DASH</h3>
+                        <div class="card-badge">DATA VIS</div>
+                    </div>
+                    <div class="card-preview" data-model="quantum-dash">
+                        <div class="model-placeholder"></div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="tech-tags">
+                            <span class="tech-tag">D3.js</span>
+                            <span class="tech-tag">Three.js</span>
+                            <span class="tech-tag">Node.js</span>
+                        </div>
+                        <button class="card-button">
+                            <span>ACCESS</span>
+                            <div class="button-arrow"></div>
+                        </button>
+                    </div>
+                    <div class="card-grid-overlay"></div>
+                </div>
+
+                <div class="cyber-card">
+                    <div class="card-header">
+                        <div class="card-corner top-left"></div>
+                        <div class="card-corner top-right"></div>
+                        <h3 class="card-title orbitron-font">CYBER CITY</h3>
+                        <div class="card-badge">3D WORLD</div>
+                    </div>
+                    <div class="card-preview" data-model="cyber-city">
+                        <div class="model-placeholder"></div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="tech-tags">
+                            <span class="tech-tag">Blender</span>
+                            <span class="tech-tag">WebGL</span>
+                            <span class="tech-tag">GLSL</span>
+                        </div>
+                        <button class="card-button">
+                            <span>ACCESS</span>
+                            <div class="button-arrow"></div>
+                        </button>
+                    </div>
+                    <div class="card-grid-overlay"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3D Model Viewer -->
+        <section class="model-viewer-section">
+            <div class="viewer-container" id="3d-model-viewer"></div>
+            <div class="viewer-controls glass-panel">
+                <h3 class="orbitron-font">MODEL INTERACTOR</h3>
+                <div class="control-panel">
+                    <button class="neon-button small" id="rotate-btn">ROTATE</button>
+                    <button class="neon-button small" id="zoom-btn">ZOOM</button>
+                    <button class="neon-button small" id="theme-btn">THEME</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline -->
+        <section id="experience" class="timeline-section">
+            <h2 class="section-title orbitron-font">CHRONOLOGICAL DATABASE</h2>
+            <div class="cyber-timeline">
+                <div class="timeline-track"></div>
+                
+                <div class="timeline-node">
+                    <div class="node-core"></div>
+                    <div class="node-aura"></div>
+                    <div class="node-content glass-panel">
+                        <div class="node-date">2025-PRESENT</div>
+                        <h3 class="node-title orbitron-font">Lead Immersive Developer</h3>
+                        <p class="node-company">Neonova Systems</p>
+                        <div class="node-tech">
+                            <span>WebGL</span>
+                            <span>AI</span>
+                            <span>XR</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-node">
+                    <div class="node-core"></div>
+                    <div class="node-aura"></div>
+                    <div class="node-content glass-panel">
+                        <div class="node-date">2023-2025</div>
+                        <h3 class="node-title orbitron-font">Senior Frontend Architect</h3>
+                        <p class="node-company">Quantum Web Labs</p>
+                        <div class="node-tech">
+                            <span>React</span>
+                            <span>Three.js</span>
+                            <span>GraphQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-node">
+                    <div class="node-core"></div>
+                    <div class="node-aura"></div>
+                    <div class="node-content glass-panel">
+                        <div class="node-date">2021-2023</div>
+                        <h3 class="node-title orbitron-font">UI/UX Engineer</h3>
+                        <p class="node-company">CyberDyne Corp</p>
+                        <div class="node-tech">
+                            <span>Figma</span>
+                            <span>WebGL</span>
+                            <span>Animation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Biometric Display -->
+        <section class="biometric-section">
+            <div class="biometric-display glass-panel">
+                <div class="bio-metric">
+                    <div class="bio-label orbitron-font">CREATIVITY</div>
+                    <div class="bio-graph">
+                        <div class="bio-wave" style="--wave-height: 85%"></div>
+                        <div class="bio-pulse"></div>
+                    </div>
+                </div>
+                <div class="bio-metric">
+                    <div class="bio-label orbitron-font">TECHNICAL</div>
+                    <div class="bio-graph">
+                        <div class="bio-wave" style="--wave-height: 92%"></div>
+                        <div class="bio-pulse"></div>
+                    </div>
+                </div>
+                <div class="bio-metric">
+                    <div class="bio-label orbitron-font">INNOVATION</div>
+                    <div class="bio-graph">
+                        <div class="bio-wave" style="--wave-height: 88%"></div>
+                        <div class="bio-pulse"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cyber Terminal -->
+        <div class="cyber-terminal glass-panel">
+            <div class="terminal-header">
+                <div class="terminal-controls">
+                    <span class="control close"></span>
+                    <span class="control minimize"></span>
+                    <span class="control expand"></span>
+                </div>
+                <div class="terminal-title orbitron-font">SYSTEM TERMINAL</div>
+            </div>
+            <div class="terminal-body">
+                <div class="terminal-output">
+                    <p>> Initializing portfolio system...</p>
+                    <p>> Loading 3D components...</p>
+                    <p>> Establishing neural connection...</p>
+                </div>
+                <div class="terminal-input">
+                    <span class="prompt">></span>
+                    <input type="text" class="command-line" placeholder="Enter command...">
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title orbitron-font">CONNECT MATRIX</h2>
+            <div class="contact-grid">
+                <div class="contact-form glass-panel">
+                    <form id="cyber-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" class="neon-input" required>
+                            <label for="name">IDENTITY</label>
+                            <div class="input-underline"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" class="neon-input" required>
+                            <label for="email">FREQUENCY</label>
+                            <div class="input-underline"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" class="neon-input" rows="4" required></textarea>
+                            <label for="message">MESSAGE</label>
+                            <div class="input-underline"></div>
+                        </div>
+                        <button type="submit" class="neon-button submit-button">
+                            <span>TRANSMIT</span>
+                            <div class="button-arrow"></div>
+                        </button>
+                    </form>
+                </div>
+                <div class="contact-links">
+                    <a href="#" class="social-link pulse">
+                        <span class="link-icon">GitHub</span>
+                        <span class="link-glow"></span>
+                    </a>
+                    <a href="#" class="social-link pulse">
+                        <span class="link-icon">LinkedIn</span>
+                        <span class="link-glow"></span>
+                    </a>
+                    <a href="#" class="social-link pulse">
+                        <span class="link-icon">CodePen</span>
+                        <span class="link-glow"></span>
+                    </a>
+                    <a href="#" class="social-link pulse">
+                        <span class="link-icon">Twitter</span>
+                        <span class="link-glow"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/threeApp.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
